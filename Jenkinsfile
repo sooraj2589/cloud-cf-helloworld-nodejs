@@ -1,10 +1,10 @@
-pipeline {
-    agent { label 'master' }
-    stages {
-        stage('build') {
-            steps {
-                echo "Build stage!"
-            }
-        }
+@Library('piper-lib-os') _
+node() {
+    stage('prepare') {
+        checkout scm
+        setupCommonPipelineEnvironment script:this
+    }
+    stage('build') {
+        mtaBuild script: this
     }
 }
