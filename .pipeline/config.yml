@@ -9,5 +9,4 @@ steps:
       apiEndpoint: 'https://api.cf.us10.hana.ondemand.com'
       org: 'Apple_Inc._devops-explore'
       space: 'Devops_Sandbox'
-      appName: 'customJenkinsDeployment'
       credentialsId: 'CF_USER'
