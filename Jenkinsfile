@@ -5,7 +5,7 @@ node() {
         setupCommonPipelineEnvironment script:this
     }
     stage('build') {
-        //mtaBuild script: this
+        mtaBuild script: this
     }
     stage('deploy') {
         //cloudFoundryDeploy script: this
